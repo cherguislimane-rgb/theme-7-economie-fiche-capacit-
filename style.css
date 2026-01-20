@@ -1,0 +1,51 @@
+
+:root{
+  --text:#0f172a;
+  --muted:#475569;
+  --card:#eaf1f9;
+  --border:rgba(15,23,42,.14);
+  --shadow:0 10px 25px rgba(15,23,42,.12);
+  --radius:18px;
+  --blue:#0b5cab;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background: linear-gradient(#ffffff 0%, #eef2f7 60%, #eef2f7 100%);
+}
+.container{max-width:1100px;margin:0 auto;padding:28px 18px 40px;}
+header{text-align:center;margin-bottom:22px;}
+header h1{margin:0;font-size:clamp(28px,4.2vw,46px);letter-spacing:-0.02em;}
+header .sub{margin-top:8px;font-size:18px;color:var(--muted);}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:28px;}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:520px){.grid{grid-template-columns:1fr;}}
+.card{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  background: linear-gradient(180deg,#f7fbff 0%, var(--card) 100%);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px 18px 16px;
+  min-height:160px;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.card:hover{transform: translateY(-2px);box-shadow:0 14px 32px rgba(15,23,42,.14);}
+.card .icon{font-size:38px;line-height:1;margin-bottom:8px;}
+.card .title{font-weight:800;font-size:18px;line-height:1.2;margin:0 0 8px;}
+.card .desc{margin:0;color:var(--muted);font-size:14px;line-height:1.35;}
+footer{margin-top:34px;text-align:center;color:var(--muted);font-size:13px;}
+
+.topbar{background:linear-gradient(90deg,#0b5cab,#0f75d6);color:white;}
+.topbar .container{padding:14px 18px;}
+.topbar h2{margin:0;font-size:18px;letter-spacing:.02em;}
+.breadcrumb{margin-top:6px;font-size:14px;}
+.breadcrumb a{color:white;text-underline-offset:3px;}
+
+.fiche{max-width:1200px;margin:0 auto;padding:18px;}
+.fiche img{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow);background:white;}
